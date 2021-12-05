@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Counter } from "./components/Counter";
 import { ProductsList } from "./components/ProductsList";
 import { BikeList } from "./components/BikeList";
-import { NavBarModern1 } from "react-navigation-pickupbiz";
+import { NavLib } from "react-navlib-pickupbiz";
 
 import "./App.css";
 const App = () => {
@@ -45,7 +45,7 @@ const App = () => {
   ];
   return (
     <BrowserRouter>
-      <NavBarModern1 links={links} />
+      <NavLib type="modern" links={links} />
       <Routes>
         <Route path="/" element={<Counter />} />
         <Route path="/products" element={<ProductsList />} />
