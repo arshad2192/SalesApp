@@ -8,6 +8,11 @@ import "./App.css";
 const App = () => {
   const links = [
     {
+      title: "Ayaz",
+      icon: "fa fa-home",
+      url: "/",
+    },
+    {
       title: "Home",
       icon: "fa fa-home",
       url: "/",
@@ -26,6 +31,16 @@ const App = () => {
       title: "Counter",
       icon: "fa fa-cogs",
       url: "/",
+    },
+    {
+      title: "Simran",
+      icon: "fa fa-cogs",
+      url: "/bikes",
+    },
+    {
+      title: "Simran",
+      icon: "fa fa-phone-square",
+      url: "/products",
     },
   ];
   return (

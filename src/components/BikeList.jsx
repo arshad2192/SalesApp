@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BikeItem } from "./BikeItem";
 import { bikes } from "../services/bikes";
 import { Row, Col, Button } from "react-bootstrap";
@@ -7,9 +7,17 @@ export const BikeList = () => {
   const [filtBike, setFiltBike] = useState(bikes);
   const [txtSearch, setTxtSearch] = useState("KTM 200 Duke");
   const handleSearch = () => {
-    const filteredBikes = bikes.filter((item) => item.name === txtSearch);
+    const filteredBikes = bikes.filter((item) =>
+      item.name.toUpperCase().includes(txtSearch.toUpperCase())
+    );
     txtSearch !== "" ? setFiltBike(filteredBikes) : setFiltBike(bikes);
   };
+  useEffect(() => {
+    console.log("This is mounting hook");
+    return () => {
+      console.log("Your component is unmounting");
+    };
+  }, []);
   return (
     <div>
       <Row>
@@ -27,7 +35,7 @@ export const BikeList = () => {
       </Row>
       <Row>
         {filtBike.map((item, index) => (
-          <Col>
+          <Col lg={3}>
             <BikeItem item={item} index={index} />
           </Col>
         ))}
