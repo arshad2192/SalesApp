@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Badge } from "react-navigation-pickupbiz";
 import { Button } from "react-bootstrap";
+import { Badge } from "react-navigation-pickupbiz";
 
 export const Counter = () => {
   const [counter, setCounter] = useState(0);
+
   return (
     <div>
       <Button disabled={!(counter > 0)} onClick={() => setCounter(counter - 1)}>
@@ -16,7 +17,9 @@ export const Counter = () => {
       >
         +
       </Button>
-      <Badge />
+      <p>
+        <Badge value="Asad Component" />
+      </p>
     </div>
   );
 };
