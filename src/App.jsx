@@ -5,6 +5,7 @@ import { BikeList } from "./components/BikeList";
 import { NavLib } from "react-navlib-pickupbiz";
 
 import "./App.css";
+import { DataList } from "./components/DataList";
 const App = () => {
   const links = [
     {
@@ -50,6 +51,7 @@ const App = () => {
         <Route path="/" element={<Counter />} />
         <Route path="/products" element={<ProductsList />} />
         <Route path="/bikes" element={<BikeList />} />
+        <Route path="/data" element={<DataList/>}/>
       </Routes>
     </BrowserRouter>
   );

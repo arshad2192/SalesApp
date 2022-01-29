@@ -1,0 +1,6 @@
+.Data {
+  margin: 5px;
+  padding: 5px;
+  border: ridge rgb(194, 172, 172) 5px !important;
+  border-radius: 20px !important;
+}
